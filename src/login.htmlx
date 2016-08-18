@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div width="100%" height="100%" backgroundImage="/images/bg.jpg">
+		<div width="100%" height="100%" vAlign="middle" hAlign="center"
+			layout="VBox">
+			<div width="100%" height="-2" vAlign="middle" hAlign="center"
+				paddingBottom="10">
+				<input type="label" value="账号：" color="#eaeaea" /> <input type="text"
+					emptyText="请输入账号" id="name" width="180" />
+			</div>
+			<div width="100%" height="-2" vAlign="middle" hAlign="center"
+				paddingBottom="20">
+				<input type="label" value="密码：" color="#eaeaea"/> <input type="password"
+					emptyText="请输入密码" id="password" width="180" />
+			</div>
+			<div width="100%" height="-2" vAlign="middle" hAlign="center"
+				paddingBottom="20">
+				<input type="button" value="登录" width="120" onClick="login" /> <input
+					type="button" value="取消" width="120" onClick="cancel" />
+			</div>
+		</div>
+
+	</div>
+
+</body>
+<script>
+	function login() {
+
+	}
+	function cancel() {
+
+	}
+</script>
+</html>

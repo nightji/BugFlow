@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <appId>BugFlow</appId>
+    <appName>bug流程</appName>
+    <description></description>
+    <date>2016-08-17</date>
+    <homepage>/index.html</homepage>
+    <icon>/images/app.png</icon>
+    <minClientVersion>1.0</minClientVersion>
+    <appVersion>1.0</appVersion>
+    <updateTime></updateTime>
+    <patchVersion></patchVersion>
+</config>

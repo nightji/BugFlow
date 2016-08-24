@@ -580,40 +580,68 @@ jsDebug.debug =  function(resource,line,scope,args,evalFunc){
 };
 
 var $jsd = jsDebug.debug;
-Emp.page.setId('_body_206660528');
-var _div_862436897 = new Emp.Panel({"id":"_div_862436897","height":"100%","width":"100%","backgroundImage":"/images/bg.jpg"});
-var _div_1609794276 = new Emp.Panel({"id":"_div_1609794276","height":"100%","vAlign":"middle","layout":"VBox","hAlign":"center","width":"100%"});
-var _div_1813411826 = new Emp.Panel({"id":"_div_1813411826","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"10"});
-var _input_924641358 = new Emp.Label({"id":"_input_924641358","color":"#eaeaea","value":"账号："});
-_div_1813411826.add(_input_924641358);
-var name = new Emp.Text({"id":"name","width":"180","emptyText":"请输入账号"});
-_div_1813411826.add(name);
-_div_1609794276.add(_div_1813411826);
-var _div_122435629 = new Emp.Panel({"id":"_div_122435629","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"20"});
-var _input_486282777 = new Emp.Label({"id":"_input_486282777","color":"#eaeaea","value":"密码："});
-_div_122435629.add(_input_486282777);
-var password = new Emp.Text({"id":"password","width":"180","emptyText":"请输入密码"});
-password.setInputType("password");
-_div_122435629.add(password);
-_div_1609794276.add(_div_122435629);
-var _div_1929936153 = new Emp.Panel({"id":"_div_1929936153","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"20"});
-var _input_843919183 = new Emp.Button({"id":"_input_843919183","width":"120","value":"登录"});
-_input_843919183.addEvent('onClick',login);
-_div_1929936153.add(_input_843919183);
-var _input_1767703893 = new Emp.Button({"id":"_input_1767703893","width":"120","value":"取消"});
-_input_1767703893.addEvent('onClick',cancel);
-_div_1929936153.add(_input_1767703893);
-_div_1609794276.add(_div_1929936153);
-_div_862436897.add(_div_1609794276);
-Emp.page.add(_div_862436897);
+Emp.page.setId('_body_1134990017');
+var _div_1827463065 = new Emp.Panel({"id":"_div_1827463065","height":"100%","width":"100%","backgroundImage":"/images/bg.jpg"});
+var _div_860614061 = new Emp.Panel({"id":"_div_860614061","height":"100%","vAlign":"middle","layout":"VBox","hAlign":"center","width":"100%"});
+var _div_1038160682 = new Emp.Panel({"id":"_div_1038160682","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"10"});
+var _input_61950499 = new Emp.Label({"id":"_input_61950499","color":"#eaeaea","value":"账号："});
+_div_1038160682.add(_input_61950499);
+var EMPuserid = new Emp.Text({"id":"EMPuserid","width":"180","emptyText":"请输入账号"});
+_div_1038160682.add(EMPuserid);
+_div_860614061.add(_div_1038160682);
+var _div_1316032594 = new Emp.Panel({"id":"_div_1316032594","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"20"});
+var _input_1625726905 = new Emp.Label({"id":"_input_1625726905","color":"#eaeaea","value":"密码："});
+_div_1316032594.add(_input_1625726905);
+var EMPpassword = new Emp.Text({"id":"EMPpassword","width":"180","emptyText":"请输入密码"});
+EMPpassword.setInputType("password");
+_div_1316032594.add(EMPpassword);
+_div_860614061.add(_div_1316032594);
+var _div_447826258 = new Emp.Panel({"id":"_div_447826258","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"20"});
+var _input_1833219118 = new Emp.Button({"id":"_input_1833219118","width":"120","value":"登录"});
+_input_1833219118.addEvent('onClick',login);
+_div_447826258.add(_input_1833219118);
+var _input_965832717 = new Emp.Button({"id":"_input_965832717","width":"120","value":"取消"});
+_input_965832717.addEvent('onClick',cancel);
+_div_447826258.add(_input_965832717);
+_div_860614061.add(_div_447826258);
+_div_1827463065.add(_div_860614061);
+Emp.page.add(_div_1827463065);
 
 
 
 
  
-$jsd('/BugFlow/src/login.htmlx',30,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);});function login() { 
+$jsd('/flow/src/login.htmlx',30,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);});function login() { 
+$jsd('/flow/src/login.htmlx',31,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var userid = EMPuserid.getValue(); 
+$jsd('/flow/src/login.htmlx',32,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var password = EMPpassword.getValue(); 
+$jsd('/flow/src/login.htmlx',33,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); user = checkUser(userid, password); 
 } 
-$jsd('/BugFlow/src/login.htmlx',33,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function cancel() { 
+$jsd('/flow/src/login.htmlx',36,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function cancel() { 
+$jsd('/flow/src/login.htmlx',37,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); EMPuserid.setValue(""); 
+$jsd('/flow/src/login.htmlx',38,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); EMPpassword.setValue(""); 
+} 
+$jsd('/flow/src/login.htmlx',41,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function checkUser(userid, password) { 
+$jsd('/flow/src/login.htmlx',42,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var ajax = new $M.Ajax(); 
+$jsd('/flow/src/login.htmlx',43,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.add("userid", userid); 
+$jsd('/flow/src/login.htmlx',44,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.add("password", password); 
+$jsd('/flow/src/login.htmlx',45,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.setAction("/CheckUser.jsp"); 
+$jsd('/flow/src/login.htmlx',46,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.submit(function (result) { 
+$jsd('/flow/src/login.htmlx',47,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); log("回传的值:" + result); 
+$jsd('/flow/src/login.htmlx',48,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var result = result.replace(/s/g, ""); 
+$jsd('/flow/src/login.htmlx',49,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); log("经过处理后回传的值:" + result); 
+$jsd('/flow/src/login.htmlx',50,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var user = result; 
+if($jsd('/flow/src/login.htmlx',51,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);})||true) if (user == "true") { 
+$jsd('/flow/src/login.htmlx',52,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); pref = new $M.Preferences(); 
+$jsd('/flow/src/login.htmlx',53,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); pref.open("myPref"); 
+$jsd('/flow/src/login.htmlx',54,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); pref.put("userid", userid); 
+$jsd('/flow/src/login.htmlx',55,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); pref.put("password", password); 
+$jsd('/flow/src/login.htmlx',56,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/choosepage.html", "params":userid, "isDestroySelf":true, }); 
+} else { 
+$jsd('/flow/src/login.htmlx',62,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); alert("用户名或密码错误,请重新输入!!!!!!"); 
+} 
+}, function (errorCode, errorMsg) { 
+$jsd('/flow/src/login.htmlx',65,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); log("ajax Error : " + errorCode + " " + errorMsg); 
+}); 
 } 
  
 Emp.page.render();

@@ -26,22 +26,25 @@
 </body>
 
 <script>
+
 	function onClickSetting() {
 	//todo
 	$M.page.goTo({
 				'url' : '/login.html',
 			});
 	}
+	
 	function onClikNewFlow(){
 	//todo
 		$M.page.goTo({
 				'url' : '/newFlow.html',
 			});
 	}
+	
 	function onClickExistFlow(){
 	//todo
 		$M.page.goTo({
-				'url' : '/existFlow.html',
+				'url' : '/existFlow1.html',
 			});
 	}
 </script>

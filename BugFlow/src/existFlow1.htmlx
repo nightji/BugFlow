@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<!-- 标题栏 -->
+	<div id="nav" width="100%" height="52">
+		<div width="100%" height="100%" vAlign="middle" hAlign="center"
+			backgroundColor="#474747">
+			<input type="label" value="解决问题" color="#ffffff" fontSize="25" />
+		</div>
+	</div>
+	<!-- 标题栏End -->
+	<slide id="slide"> <!-- slidepage1 --> <slidepage>
+	<!-- 正文 -->
+	<div width="100%" height="100%" overflow="y" layout="VBox"
+		backgroundColor="#eaeaea">
+
+		<!-- 问题类型 -->
+		<div id="tmp1" width="100%" height="80" layout="HBox" vAlign="middle">
+			<input type="label" paddingLeft="20" value="问   题   类  型:" /> <select
+				id="select" name="proType" marginLeft="50" marginRight="20"
+				width="150" value="1">
+				<option text="产品级" value="1" />
+				<option text="项目级" value="2" />
+			</select>
+		</div>
+		<!-- 分割线 -->
+		<div width="100%" height="2" backgroundColor="#f4f4f4"></div>
+
+		<!-- 问题需求类型 -->
+		<div id="tmp2" width="100%" height="80" layout="HBox" vAlign="middle">
+			<input type="label" paddingLeft="20" value="问题需求类型:" /> <select
+				id="select2" name="reqType" marginLeft="50" marginRight="20"
+				width="150" value="1">
+				<option text=" BUG" value="1" />
+				<option text=" 新需求" value="2" />
+				<option text="拓展需求" value="3" />
+			</select>
+		</div>
+		<!-- 分割线 -->
+		<div width="100%" height="2" backgroundColor="#f4f4f4"></div>
+		<!-- 问题主题 -->
+		<div id="tmp3" width="100%" height="150" layout="VBox" vAlign="middle">
+			<div width="100%" height="80" layout="HBox" vAlign="middle">
+				<input type="label" paddingLeft="20" value="问   题   主  题:" /> <select
+					id="select3" name="iosOrAndroid" marginLeft="50" marginRight="20"
+					width="150" value="3">
+					<option text="IOS" value="1" />
+					<option text="Android" value="2" />
+					<option text="IOS/Android" value="3" />
+				</select>
+			</div>
+			<div width="100%" height="100%" marginLeft="5" marginRight="5"
+				borderColor="#909090" borderWidth="1">
+				<textarea id="textarea" width="100%" height="100%" />
+			</div>
+		</div>
+		<!-- 问题描述 -->
+		<div id="tmp4" width="100%" height="200" layout="VBox" vAlign="middle"
+			marginTop="15">
+			<div width="100%" height="40">
+				<input type="label" paddingLeft="20" value="问   题   描  述:" />
+			</div>
+			<div width="100%" height="100%" marginLeft="5" marginRight="5"
+				borderColor="#909090" borderWidth="1">
+				<textarea id="textarea" width="100%" height="100%" />
+			</div>
+		</div>
+
+		<!-- 客户 -->
+		<div id="tmp5" width="100%" height="100" layout="VBox" vAlign="middle"
+			marginTop="15">
+			<div width="100%" height="40">
+				<input type="label" paddingLeft="20" value="客                户:" />
+			</div>
+			<div width="100%" height="100%" marginLeft="5" marginRight="5"
+				borderColor="#909090" borderWidth="1">
+				<textarea id="textarea" width="100%" height="100%" />
+			</div>
+		</div>
+
+		<!-- 预计开发工作量 -->
+		<div id="tmp6" width="100%" height="80" layout="HBox" vAlign="middle"
+			marginTop="15" hAlign="center">
+			<div width="100%" height="40">
+				<input type="label" paddingLeft="20" value="预计开发工作量:" />
+			</div>
+			<div width="100%" height="40" marginLeft="5" marginRight="5"
+				borderColor="#909090" borderWidth="1" vAlign="middle"
+				hAlign="center" marginTop="-5">
+				<text id="textarea" width="100%" height="40" />
+			</div>
+		</div>
+
+
+	</div>
+
+	</slidepage> <!-- slidepage1 End --> <!-- slidepage2 --> <slidepage> <!-- background -->
+	<div width="100%" height="100%" layout="VBox" backgroundColor="#eaeaea">
+		<!-- Bug号 -->
+		<div id="tmp7" width="100%" height="120" layout="VBox" vAlign="middle"
+			hAlign="center">
+			<div width="100%" height="40">
+				<input type="label" paddingLeft="20" value="Bug            号:" />
+				<!-- 				<input type="label" paddingLeft="20" value="问题需求类型:" /> -->
+			</div>
+			<div width="100%" height="40" marginLeft="5" marginRight="5"
+				borderColor="#909090" borderWidth="1" vAlign="middle"
+				hAlign="center">
+				<text id="textarea" width="100%" height="40" />
+			</div>
+		</div>
+		<!-- 问题修改人 -->
+		<div id="tmp8" width="100%" height="80" layout="HBox" vAlign="middle"
+			marginTop="0" hAlign="center">
+			<div width="100%" height="40">
+				<input type="label" paddingLeft="20" value="问 题 修 改 人:" />
+			</div>
+			<div width="100%" height="40" marginLeft="5" marginRight="5"
+				borderColor="#909090" borderWidth="1" vAlign="middle"
+				hAlign="center" marginTop="-5">
+				<text id="textarea" width="100%" height="40" />
+			</div>
+		</div>
+
+		<!-- 开发提交时间 -->
+		<div id="tmp9" width="100%" height="80" layout="HBox" vAlign="middle"
+			marginTop="0" hAlign="center">
+			<div width="100%" height="40">
+				<input type="label" paddingLeft="20" value="开发提交时间:" />
+			</div>
+			<div width="100%" height="40" marginLeft="5" marginRight="5"
+				borderColor="#909090" borderWidth="1" vAlign="middle"
+				hAlign="center" marginTop="-5">
+				<text id="textarea" width="100%" height="40" />
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+
+
+
+
+	</slidepage> </slide>
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+	
+</script>
+</html>

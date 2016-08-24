@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div width="100%" height="100%" backgroundImage="/images/bg.jpg">
+		<div width="100%" height="100%" vAlign="middle" hAlign="center"
+			layout="VBox">
+			<div width="100%" height="-2" vAlign="middle" hAlign="center"
+				paddingBottom="10">
+				<input type="label" value="账号：" color="#eaeaea" /> <input
+					type="text" emptyText="请输入账号" id="EMPuserid" width="180" />
+			</div>
+			<div width="100%" height="-2" vAlign="middle" hAlign="center"
+				paddingBottom="20">
+				<input type="label" value="密码：" color="#eaeaea" /> <input
+					type="password" emptyText="请输入密码" id="EMPpassword" width="180" />
+			</div>
+			<div width="100%" height="-2" vAlign="middle" hAlign="center"
+				paddingBottom="20">
+				<input type="button" value="登录" width="120" onClick="login" /> <input
+					type="button" value="取消" width="120" onClick="cancel" />
+			</div>
+		</div>
+
+	</div>
+
+</body>
+<script>
+	function login() {
+
+		var pref = new $M.Preferences();//创建一个本地持久化存储对象
+		pref.open('myPref');//打开已经存在的本地化存储对象，假如该对象不存在，则创建一个本地持久化存储
+		var userid = EMPuserid.getValue();
+		var password = EMPpassword.getValue();
+		log("login,EMPuserid", userid);
+		log("login,EMPpassword", password);
+		var user = chackUser(userid, password);
+
+		if (user.user == "wrong") {
+			alert("wrong");
+
+		} else {
+			pref.put("userid", userid);
+			pref.put("password", password);
+			/* $M.page.goTo({
+				'url' : '/choosepage.html',
+				'params' : userid,
+				'isDestroySelf' : true,
+			}); */
+		}
+
+	}
+	function cancel() {
+		EMPuserid.setValue("");
+		EMPpassword.setValue("");
+
+	}
+	function chackUser(userid, password) {
+		var ajax = new $M.Ajax();//创建 ajax 对象
+		ajax.add("userid", userid); //设置 ajax 参数
+		ajax.add("password", password);
+		ajax.setAction("/ChackUser.jsp"); //设置 ajax 请求地址
+		ajax.submit(function(result) { //ajax 请求成功的回调函数，result 为返回的数据
+			return result;
+		}, function(errorCode, errorMsg) { //ajax 请求失败的回调函数
+			log("ajax Error : " + errorCode + " " + errorMsg);//在控制台打印
+		});
+
+	};
+</script>
+</html>

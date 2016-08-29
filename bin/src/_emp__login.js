@@ -1,29 +1,29 @@
-Emp.page.setId('_body_1718545178');
-var _div_2081238143 = new Emp.Panel({"id":"_div_2081238143","height":"100%","width":"100%","backgroundImage":"/images/bg.jpg"});
-    var _div_1155827065 = new Emp.Panel({"id":"_div_1155827065","height":"100%","vAlign":"middle","layout":"VBox","hAlign":"center","width":"100%"});
-    var _div_1995894340 = new Emp.Panel({"id":"_div_1995894340","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"10"});
-    var _input_1301606240 = new Emp.Label({"id":"_input_1301606240","color":"#eaeaea","value":"账号："});
-            _div_1995894340.add(_input_1301606240);
+Emp.page.setId('_body_293330712');
+var _div_1534306719 = new Emp.Panel({"id":"_div_1534306719","height":"100%","width":"100%","backgroundImage":"/images/bg.jpg"});
+    var _div_109393057 = new Emp.Panel({"id":"_div_109393057","height":"100%","vAlign":"middle","layout":"VBox","hAlign":"center","width":"100%"});
+    var _div_323107167 = new Emp.Panel({"id":"_div_323107167","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"10"});
+    var _input_1623496153 = new Emp.Label({"id":"_input_1623496153","color":"#eaeaea","value":"账号："});
+            _div_323107167.add(_input_1623496153);
         var EMPuserid = new Emp.Text({"id":"EMPuserid","width":"180","emptyText":"请输入账号"});
-            _div_1995894340.add(EMPuserid);
-                _div_1155827065.add(_div_1995894340);
-        var _div_1810206725 = new Emp.Panel({"id":"_div_1810206725","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"20"});
-    var _input_743600026 = new Emp.Label({"id":"_input_743600026","color":"#eaeaea","value":"密码："});
-            _div_1810206725.add(_input_743600026);
+            _div_323107167.add(EMPuserid);
+                _div_109393057.add(_div_323107167);
+        var _div_52740926 = new Emp.Panel({"id":"_div_52740926","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"20"});
+    var _input_1653480718 = new Emp.Label({"id":"_input_1653480718","color":"#eaeaea","value":"密码："});
+            _div_52740926.add(_input_1653480718);
         var EMPpassword = new Emp.Text({"id":"EMPpassword","width":"180","emptyText":"请输入密码"});
 EMPpassword.setInputType("password");
-            _div_1810206725.add(EMPpassword);
-                _div_1155827065.add(_div_1810206725);
-        var _div_1467248680 = new Emp.Panel({"id":"_div_1467248680","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"20"});
-    var _input_493846259 = new Emp.Button({"id":"_input_493846259","width":"120","value":"登录"});
-	_input_493846259.addEvent('onClick',login);
-            _div_1467248680.add(_input_493846259);
-        var _input_49779358 = new Emp.Button({"id":"_input_49779358","width":"120","value":"取消"});
-	_input_49779358.addEvent('onClick',cancel);
-            _div_1467248680.add(_input_49779358);
-                _div_1155827065.add(_div_1467248680);
-                _div_2081238143.add(_div_1155827065);
-        Emp.page.add(_div_2081238143);
+            _div_52740926.add(EMPpassword);
+                _div_109393057.add(_div_52740926);
+        var _div_822688970 = new Emp.Panel({"id":"_div_822688970","height":"-2","vAlign":"middle","hAlign":"center","width":"100%","paddingBottom":"20"});
+    var _input_1433799404 = new Emp.Button({"id":"_input_1433799404","width":"120","value":"登录"});
+	_input_1433799404.addEvent('onClick',login);
+            _div_822688970.add(_input_1433799404);
+        var _input_952580041 = new Emp.Button({"id":"_input_952580041","width":"120","value":"取消"});
+	_input_952580041.addEvent('onClick',cancel);
+            _div_822688970.add(_input_952580041);
+                _div_109393057.add(_div_822688970);
+                _div_1534306719.add(_div_109393057);
+        Emp.page.add(_div_1534306719);
 		
 
 	function login() {	
@@ -37,7 +37,7 @@ EMPpassword.setInputType("password");
 		EMPpassword.setValue("");
 	}
 	
-	function checkUser(userid, password) {
+	 function checkUser(userid, password) {
 		var ajax = new $M.Ajax();//创建 ajax 对象
 		ajax.add("userid", userid); //设置 ajax 参数
 		ajax.add("password", password);
@@ -63,7 +63,7 @@ EMPpassword.setInputType("password");
 		}, function(errorCode, errorMsg) { //ajax 请求失败的回调函数
 			log("ajax Error : " + errorCode + " " + errorMsg);//在控制台打印
 		});
-	};
+	}; 
 
 
      Emp.page.render();

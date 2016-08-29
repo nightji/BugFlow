@@ -580,43 +580,59 @@ jsDebug.debug =  function(resource,line,scope,args,evalFunc){
 };
 
 var $jsd = jsDebug.debug;
-Emp.page.setId('_body_117561297');
+Emp.page.setId('_body_2099489736');
+/* 	$M.includeFile("/Utils/queryUtils.html"); */
 var welcome = new Emp.Panel({"id":"welcome","height":"100%","layout":"VBox","hAlign":"center","width":"100%","backgroundImage":"/images/bg.jpg","class":"setting-title"});
-var _div_2101574409 = new Emp.Panel({"id":"_div_2101574409","height":"180","layout":"HBox","width":"100%"});
-var _div_1497549854 = new Emp.Panel({"id":"_div_1497549854","height":"100%","width":"100%"});
-_div_2101574409.add(_div_1497549854);
-var _div_812053338 = new Emp.Panel({"id":"_div_812053338","paddingTop":"10","height":"60","width":"60","paddingBottom":"10","paddingLeft":"10","paddingRight":"10"});
-var _img_921875081 = new Emp.Image({"id":"_img_921875081","height":"100%","width":"100%","src":"/images/setting.png"});
-_img_921875081.addEvent('onClick',onClickSetting);
-_div_812053338.add(_img_921875081);
-_div_2101574409.add(_div_812053338);
-welcome.add(_div_2101574409);
-var _div_2007456909 = new Emp.Panel({"id":"_div_2007456909","wAlign":"center","height":"60","width":"120"});
-var _img_212691546 = new Emp.Image({"id":"_img_212691546","height":"100%","width":"100%","src":"/images/button1.png"});
-_img_212691546.addEvent('onClick',onClikNewFlow);
-_div_2007456909.add(_img_212691546);
-welcome.add(_div_2007456909);
-var _div_1294025014 = new Emp.Panel({"id":"_div_1294025014","height":"100","width":"100%"});
-welcome.add(_div_1294025014);
-var _div_1111517129 = new Emp.Panel({"id":"_div_1111517129","wAlign":"center","height":"60","width":"120"});
-var _img_308141850 = new Emp.Image({"id":"_img_308141850","height":"100%","width":"100%","src":"/images/button2.png"});
-_img_308141850.addEvent('onClick',onClickExistFlow);
-_div_1111517129.add(_img_308141850);
-welcome.add(_div_1111517129);
+var _div_220589572 = new Emp.Panel({"id":"_div_220589572","height":"180","layout":"HBox","width":"100%"});
+var _div_892161882 = new Emp.Panel({"id":"_div_892161882","height":"100%","width":"100%"});
+_div_220589572.add(_div_892161882);
+var _div_833927420 = new Emp.Panel({"id":"_div_833927420","paddingTop":"10","height":"60","width":"60","paddingBottom":"10","paddingLeft":"10","paddingRight":"10"});
+var _img_1339867618 = new Emp.Image({"id":"_img_1339867618","height":"100%","width":"100%","src":"/images/setting.png"});
+_img_1339867618.addEvent('onClick',onClickSetting);
+_div_833927420.add(_img_1339867618);
+_div_220589572.add(_div_833927420);
+welcome.add(_div_220589572);
+var _div_641533284 = new Emp.Panel({"id":"_div_641533284","wAlign":"center","height":"60","width":"120"});
+var _img_1881996248 = new Emp.Image({"id":"_img_1881996248","height":"100%","width":"100%","src":"/images/button1.png"});
+_img_1881996248.addEvent('onClick',onClikNewFlow);
+_div_641533284.add(_img_1881996248);
+welcome.add(_div_641533284);
+var _div_424303473 = new Emp.Panel({"id":"_div_424303473","height":"100","width":"100%"});
+welcome.add(_div_424303473);
+var _div_1622762671 = new Emp.Panel({"id":"_div_1622762671","wAlign":"center","height":"60","width":"120"});
+var _img_729894597 = new Emp.Image({"id":"_img_729894597","height":"100%","width":"100%","src":"/images/button2.png"});
+_img_729894597.addEvent('onClick',onClickExistFlow);
+_div_1622762671.add(_img_729894597);
+welcome.add(_div_1622762671);
 Emp.page.add(welcome);
 
 
 
 
+
+
+
+
  
-$jsd('/flow/src/choosepage.htmlx',30,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);});function onClickSetting() { 
-$jsd('/flow/src/choosepage.htmlx',32,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/login.html", }); 
+$jsd('/flows/src/choosePage.htmlx',32,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);});var userid; 
+$jsd('/flows/src/choosePage.htmlx',33,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.addEvent("onLoad", function (data) { 
+$jsd('/flows/src/choosePage.htmlx',34,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); userid = data.userid; 
+}); 
+$jsd('/flows/src/choosePage.htmlx',37,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function onClickSetting() { 
+$jsd('/flows/src/choosePage.htmlx',38,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var ajax = new $M.Ajax(); 
+$jsd('/flows/src/choosePage.htmlx',39,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.add("userid", userid); 
+$jsd('/flows/src/choosePage.htmlx',40,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); log("00000", userid); 
+$jsd('/flows/src/choosePage.htmlx',42,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.setAction("/queryPro.jsp"); 
+$jsd('/flows/src/choosePage.htmlx',43,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.submit(function (result) { 
+$jsd('/flows/src/choosePage.htmlx',45,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/flowList.html", "params":{jsonString:result}, }); 
+}, function (errorCode, errorMsg) { 
+}); 
 } 
-$jsd('/flow/src/choosepage.htmlx',37,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function onClikNewFlow() { 
-$jsd('/flow/src/choosepage.htmlx',39,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/newFlow.html", }); 
+$jsd('/flows/src/choosePage.htmlx',57,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function onClikNewFlow() { 
+$jsd('/flows/src/choosePage.htmlx',59,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/newFlow.html", }); 
 } 
-$jsd('/flow/src/choosepage.htmlx',44,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function onClickExistFlow() { 
-$jsd('/flow/src/choosepage.htmlx',46,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/existFlow5.html", }); 
+$jsd('/flows/src/choosePage.htmlx',64,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function onClickExistFlow() { 
+$jsd('/flows/src/choosePage.htmlx',66,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/flowList.html", }); 
 } 
  
 Emp.page.render();

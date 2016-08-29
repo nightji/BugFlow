@@ -38,7 +38,7 @@
 		EMPpassword.setValue("");
 	}
 	
-	function checkUser(userid, password) {
+	 function checkUser(userid, password) {
 		var ajax = new $M.Ajax();//创建 ajax 对象
 		ajax.add("userid", userid); //设置 ajax 参数
 		ajax.add("password", password);
@@ -64,6 +64,6 @@
 		}, function(errorCode, errorMsg) { //ajax 请求失败的回调函数
 			log("ajax Error : " + errorCode + " " + errorMsg);//在控制台打印
 		});
-	};
+	}; 
 </script>
 </html>

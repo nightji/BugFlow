@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
-    <appId>flow</appId>
-    <appName>bugflowTest</appName>
+    <appId>flows</appId>
+    <appName>提交流程</appName>
     <description></description>
-    <date>2016-08-24</date>
+    <date>2016-08-25</date>
     <homepage>/index.html</homepage>
     <icon>/images/app.png</icon>
     <minClientVersion>1.0</minClientVersion>

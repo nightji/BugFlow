@@ -18,7 +18,8 @@
 
 		<!-- 问题类型 -->
 		<div id="tmp1" width="100%" height="80" layout="HBox" vAlign="middle">
-			<input type="label" paddingLeft="20" value="问   题   类  型:" /> <select
+			<input id="proType" type="label" paddingLeft="20" value="问   题   类  型:" /> 
+			<select
 				id="select" name="proType" marginLeft="50" marginRight="20"
 				width="150" value="1">
 				<option text="产品级" value="1" />
@@ -30,7 +31,7 @@
 
 		<!-- 问题需求类型 -->
 		<div id="tmp2" width="100%" height="80" layout="HBox" vAlign="middle">
-			<input type="label" paddingLeft="20" value="问题需求类型:" /> <select
+			<input id="reqType" type="label" paddingLeft="20" value="问题需求类型:" /> <select
 				id="select2" name="reqType" marginLeft="50" marginRight="20"
 				width="150" value="1">
 				<option text=" BUG" value="1" />
@@ -53,7 +54,7 @@
 			</div>
 			<div width="100%" height="100%" marginLeft="20" marginRight="32"
 				borderColor="#909090" borderWidth="1">
-				<textarea id="textarea" width="100%" height="100%" />
+				<textarea id="proTheme" width="100%" height="100%" />
 			</div>
 		</div>
 		<!-- 问题描述 -->
@@ -64,7 +65,7 @@
 			</div>
 			<div width="100%" height="100%" marginLeft="20" marginRight="32"
 				borderColor="#909090" borderWidth="1">
-				<textarea id="textarea" width="100%" height="100%" />
+				<textarea id="proDescript" width="100%" height="100%" />
 			</div>
 		</div>
 
@@ -76,7 +77,7 @@
 			</div>
 			<div width="100%" height="100%" marginLeft="20" marginRight="32"
 				borderColor="#909090" borderWidth="1">
-				<textarea id="textarea" width="100%" height="100%" />
+				<textarea id="cusName" width="100%" height="100%" />
 			</div>
 		</div>
 
@@ -89,7 +90,7 @@
 			<div width="100%" height="40" marginLeft="5" marginRight="32"
 				borderColor="#909090" borderWidth="1" vAlign="middle"
 				hAlign="center" marginTop="-5">
-				<text id="textarea" width="100%" height="40" />
+				<text id="effExpected" width="100%" height="40" />
 			</div>
 		</div>
 
@@ -110,7 +111,7 @@
 			<div width="100%" height="40" marginLeft="5" marginRight="32"
 			borderColor="#909090" borderWidth="1" vAlign="middle" marginTop="-5"
 			hAlign="center">
-				<text id="textarea" width="100%" height="40" />
+				<text id="proId" width="100%" height="40" />
 			</div>
 			
 		</div>
@@ -125,7 +126,7 @@
 			<div width="100%" height="40" marginLeft="5" marginRight="32"
 				borderColor="#909090" borderWidth="1" vAlign="middle"
 				hAlign="center" marginTop="-5">
-				<text id="textarea" width="100%" height="40" />
+				<text id="proModifier" width="100%" height="40" />
 			</div>
 		</div>
 		<!-- 分割线 -->
@@ -139,7 +140,7 @@
 			<div width="100%" height="40" marginLeft="5" marginRight="32"
 				borderColor="#909090" borderWidth="1" vAlign="middle"
 				hAlign="center" marginTop="-5">
-				<text id="textarea" width="100%" height="40" />
+				<text id="subTime" width="100%" height="40" />
 			</div>
 		</div>
 
@@ -151,7 +152,7 @@
 			</div>
 			<div width="100%" height="100%" marginLeft="20" marginRight="32"
 				borderColor="#909090" borderWidth="1">
-				<textarea id="textarea" width="100%" height="100%" />
+				<textarea id="modDescript" width="100%" height="100%" />
 			</div>
 		</div>
 
@@ -183,7 +184,7 @@
 			<div width="100%" height="40" marginLeft="20" marginRight="32"
 				borderColor="#909090" borderWidth="1" vAlign="middle"
 				hAlign="center">
-				<text id="textarea" width="100%" height="40" />
+				<text id="clientVersion" width="100%" height="40" />
 			</div>
 		</div>
 		<!-- 修改文档名名称 -->
@@ -196,7 +197,7 @@
 			<div width="100%" height="40" marginLeft="20" marginRight="32"
 				borderColor="#909090" borderWidth="1" vAlign="middle"
 				hAlign="center">
-				<text id="textarea" width="100%" height="40" />
+				<text id="docName" width="100%" height="40" />
 			</div>
 		</div>
 		<div id="tmp13" width="100%" height="-2" layout="VBox" vAlign="middle"
@@ -206,7 +207,7 @@
 			</div>
 			<div width="100%" height="150"  marginLeft="20" marginRight="32"
 				borderColor="#909090" borderWidth="1">
-				<textarea id="textarea" width="100%" height="100%" />
+				<textarea id="useDescript" width="100%" height="100%" />
 			</div>
 		</div>
 	</div>
@@ -223,7 +224,7 @@
 			<div width="100%" height="40" marginLeft="5" marginRight="32"
 				borderColor="#909090" borderWidth="1" vAlign="middle"
 				hAlign="center" marginTop="-5">
-				<text id="textarea" width="100%" height="40" />
+				<text id="peopleTest" width="100%" height="40" />
 			</div>
 		</div>
 		<!-- 分割线 -->
@@ -238,7 +239,7 @@
 			<div width="100%" height="40" marginLeft="5" marginRight="32"
 				borderColor="#909090" borderWidth="1" vAlign="middle"
 				hAlign="center" marginTop="-5">
-				<text id="textarea" width="100%" height="40" />
+				<text id="testDeadline" width="100%" height="40" />
 			</div>
 		</div>
 		<!-- 分割线 -->
@@ -251,7 +252,7 @@
 			</div>
 			<div width="100%" height="100%" marginLeft="20" marginRight="32"
 				borderColor="#909090" borderWidth="1">
-				<textarea id="textarea" width="100%" height="100%" />
+				<textarea id="testCase" width="100%" height="100%" />
 			</div>
 		</div>
 	</div>
@@ -262,6 +263,24 @@
 
 </body>
 <script>
+
+	$M.page.addEvent("onLoad",function(params) {
+		log("展示界面:"+params);
+		ajax = new $M.Ajax();
+		ajax.add("proId",params);
+		ajax.setAction("/querySingleTask.jsp");
+		ajax.submit(function(result){
+			log("返回的值:"+result);
+			result = Utils.stringToJson(result);
+			loadData(result);
+		}, function(errorCode,errorMsg){
+			log("ajax Error : " + errorCode + " " + errorMsg);//在控制台打印
+		})
+	});
 	
+function loadData(result){
+	log("传入的值:"+result);
+	proType.setValue(result.proType);
+}
 </script>
 </html>

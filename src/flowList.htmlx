@@ -21,17 +21,17 @@
 				layout="VBox">
 				<div width="100%" height="100%" layout="HBox">
 					<input type="label" value="bug号：" fontSize="14" color="#919da4" />
-					<input type="label" tag="bugNum" color="#919da4" fontSize="14" />
+					<input type="label" tag="proId" color="#919da4" fontSize="14" />
 
 				</div>
-				<input type="label" tag="proTheme" fontSize="16" fontBold="true"
+				<input type="label" tag="proTitle" fontSize="16" fontBold="true"
 					marginTop="3" />
 			</div>
 			<div width="100%" height="100%" layout="HBox" marginTop="3"
 				marginLeft="10" marginRight="10">
 				<div width="100%" height="-2" hAlign="left" layout="HBox">
 					<input type="label" value="最后参与：" color="#919da4" fontSize="14" />
-					<input type="label" tag="person" color="#919da4" fontSize="14" />
+					<input type="label" tag="personDealNow" color="#919da4" fontSize="14" />
 				</div>
 				<div width="100%" height="-2" hAlign="right">
 					<input type="label" tag="status" color="#919da4" fontSize="14" />
@@ -47,25 +47,18 @@
 	</div>
 </body>
 <script>
-	$M.page
-			.addEvent(
-					"onLoad",
-					function(params) {
-						var items = [
-								{
-									'bugNum' : '123456',
-									'proTheme' : '我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题我是主题',
-									'person' : '人名',
-									'status' : '状态'
-								}, ];
-						listview.setItems(items);
-						listview.reloadData();
+	$M.page.addEvent("onLoad", function(data) {
+		var items = data.jsonString;
+		alert(items);
 
-					});
-listview.addEvent('onItemClick', function(row, tag, data){
-	$M.page.goTo({
+		listview.setItems(items);
+		listview.reloadData();
+
+	});
+	listview.addEvent('onItemClick', function(row, tag, data) {
+		$M.page.goTo({
 			'url' : '/existFlow5.html',
 		});
-});
+	});
 </script>
 </html>

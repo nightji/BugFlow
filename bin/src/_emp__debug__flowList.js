@@ -580,81 +580,61 @@ jsDebug.debug =  function(resource,line,scope,args,evalFunc){
 };
 
 var $jsd = jsDebug.debug;
-Emp.page.setId('_body_1312593373');
-var _div_1804798027 = new Emp.Panel({"id":"_div_1804798027","height":"100%","backgroundColor":"#eaeaea","layout":"VBox","width":"100%"});
+Emp.page.setId('_body_957310393');
 var nav = new Emp.Panel({"id":"nav","height":"52","width":"100%"});
-var _div_1109670143 = new Emp.Panel({"id":"_div_1109670143","height":"100%","backgroundColor":"#474747","vAlign":"middle","hAlign":"center","width":"100%"});
-var _input_1478102853 = new Emp.Label({"id":"_input_1478102853","color":"#ffffff","value":"提交问题","fontSize":"25"});
-_div_1109670143.add(_input_1478102853);
-nav.add(_div_1109670143);
-_div_1804798027.add(nav);
-var _div_383821875 = new Emp.Panel({"id":"_div_383821875","marginTop":"25"});
-var _input_2000861184 = new Emp.Label({"id":"_input_2000861184","value":"问   题   类  型:","paddingLeft":"20"});
-_div_383821875.add(_input_2000861184);
-var select = new Emp.Select({"id":"select","marginLeft":"50","width":"150","marginRight":"20","name":"proType","value":"1",items:[ {"id":"_option_1127164278","text":"产品级","value":"1"}, {"id":"_option_1296770159","text":"项目级","value":"2"}]});
-_div_383821875.add(select);
-_div_1804798027.add(_div_383821875);
-var _div_4528910 = new Emp.Panel({"id":"_div_4528910","marginTop":"25"});
-var _input_955462725 = new Emp.Label({"id":"_input_955462725","value":"问题需求类型:","paddingLeft":"20"});
-_div_4528910.add(_input_955462725);
-var select2 = new Emp.Select({"id":"select2","marginLeft":"50","width":"150","marginRight":"20","name":"reqType","value":"1",items:[ {"id":"_option_1073188434","text":" BUG","value":"1"}, {"id":"_option_362859085","text":" 新需求","value":"2"}, {"id":"_option_1866567762","text":"拓展需求","value":"3"}]});
-_div_4528910.add(select2);
-_div_1804798027.add(_div_4528910);
-var _div_963260558 = new Emp.Panel({"id":"_div_963260558","marginTop":"25"});
-var _input_1788467220 = new Emp.Label({"id":"_input_1788467220","marginTop":"10","value":"问   题   主  题:","paddingLeft":"20"});
-_div_963260558.add(_input_1788467220);
-var textarea = new Emp.TextArea({"id":"textarea","marginLeft":"50","width":"150","name":"proTheme"});
-_div_963260558.add(textarea);
-_div_1804798027.add(_div_963260558);
-var _div_612800546 = new Emp.Panel({"id":"_div_612800546","marginTop":"25"});
-var _input_7205610 = new Emp.Label({"id":"_input_7205610","marginTop":"10","value":"问   题   描  述:","paddingLeft":"20"});
-_div_612800546.add(_input_7205610);
-var textarea = new Emp.TextArea({"id":"textarea","marginLeft":"50","width":"150","name":"proDescript"});
-_div_612800546.add(textarea);
-_div_1804798027.add(_div_612800546);
-var _div_3483820 = new Emp.Panel({"id":"_div_3483820","marginTop":"25"});
-var _input_570504271 = new Emp.Label({"id":"_input_570504271","marginTop":"10","value":"客                户:","paddingLeft":"20"});
-_div_3483820.add(_input_570504271);
-var text = new Emp.TextArea({"id":"text","paddingTop":"5","marginLeft":"50","width":"150","name":"cusName"});
-_div_3483820.add(text);
-_div_1804798027.add(_div_3483820);
-var _div_2004825236 = new Emp.Panel({"id":"_div_2004825236","marginTop":"25"});
-var _input_1079320022 = new Emp.Label({"id":"_input_1079320022","marginTop":"10","value":"预 计 工 作 量:","paddingLeft":"20"});
-_div_2004825236.add(_input_1079320022);
-var text = new Emp.TextArea({"id":"text","paddingTop":"5","marginLeft":"50","width":"150","name":"effExpected"});
-_div_2004825236.add(text);
-_div_1804798027.add(_div_2004825236);
-var _div_842916382 = new Emp.Panel({"id":"_div_842916382","marginTop":"50"});
-var _input_2093496662 = new Emp.Button({"id":"_input_2093496662","color":"#0000FF","marginLeft":"90","value":"提交"});
-_input_2093496662.addEvent('onClick',login);
-_div_842916382.add(_input_2093496662);
-var _input_1026325786 = new Emp.Button({"id":"_input_1026325786","color":"#FF0000","marginLeft":"40","value":"取消"});
-_input_1026325786.addEvent('onClick',login);
-_div_842916382.add(_input_1026325786);
-_div_1804798027.add(_div_842916382);
-Emp.page.add(_div_1804798027);
-var dialog = new Emp.CustomDialog({"id":"dialog"});
-var div = new Emp.Panel({"id":"div"});
-var textarea = new Emp.TextArea({"id":"textarea","height":"100%","hidden":"true","width":"100%","value":""});
-div.add(textarea);
-dialog.setView(div);
+var _div_1420958180 = new Emp.Panel({"id":"_div_1420958180","height":"100%","backgroundColor":"#474747","vAlign":"middle","hAlign":"center","width":"100%"});
+var _input_2025976620 = new Emp.Label({"id":"_input_2025976620","color":"#ffffff","value":"流程列表","fontSize":"25"});
+_div_1420958180.add(_input_2025976620);
+nav.add(_div_1420958180);
+Emp.page.add(nav);
+var _div_88345508 = new Emp.Panel({"id":"_div_88345508","height":"100%","backgroundColor":"#eaeaea","layout":"VBox","width":"100%"});
+var listview = new Emp.ListView({"dividerVisible":"true","id":"listview","height":"100%","backgroundColor":"#eaeaea","width":"100%","dividerColor":"#eaeaea"});
+var _template_1534816008 = new Emp.Panel({"id":"_template_1534816008"});
+_template_1534816008.__isTemplate=true;
+var _div_79078692 = new Emp.Panel({"id":"_div_79078692","height":"-2","vAlign":"middle","layout":"VBox","width":"100%"});
+var _div_1930682598 = new Emp.Panel({"id":"_div_1930682598","height":"-2","marginLeft":"10","layout":"VBox","marginRight":"10","width":"100%"});
+var _div_504518416 = new Emp.Panel({"id":"_div_504518416","height":"100%","layout":"HBox","width":"100%"});
+var _input_1175579356 = new Emp.Label({"id":"_input_1175579356","color":"#919da4","value":"bug号：","fontSize":"14"});
+_div_504518416.add(_input_1175579356);
+var _input_1112683892 = new Emp.Label({"id":"_input_1112683892","color":"#919da4","tag":"proId","fontSize":"14"});
+_div_504518416.add(_input_1112683892);
+_div_1930682598.add(_div_504518416);
+var _input_590574768 = new Emp.Label({"id":"_input_590574768","marginTop":"3","tag":"proTitle","fontBold":"true","fontSize":"16"});
+_div_1930682598.add(_input_590574768);
+_div_79078692.add(_div_1930682598);
+var _div_120709342 = new Emp.Panel({"id":"_div_120709342","height":"100%","marginLeft":"10","marginTop":"3","marginRight":"10","layout":"HBox","width":"100%"});
+var _div_1537348226 = new Emp.Panel({"id":"_div_1537348226","height":"-2","layout":"HBox","hAlign":"left","width":"100%"});
+var _input_1835877325 = new Emp.Label({"id":"_input_1835877325","color":"#919da4","value":"最后参与：","fontSize":"14"});
+_div_1537348226.add(_input_1835877325);
+var _input_545161179 = new Emp.Label({"id":"_input_545161179","color":"#919da4","tag":"personDealNow","fontSize":"14"});
+_div_1537348226.add(_input_545161179);
+_div_120709342.add(_div_1537348226);
+var _div_1358697351 = new Emp.Panel({"id":"_div_1358697351","height":"-2","hAlign":"right","width":"100%"});
+var _input_1432759706 = new Emp.Label({"id":"_input_1432759706","color":"#919da4","tag":"status","fontSize":"14"});
+_div_1358697351.add(_input_1432759706);
+_div_120709342.add(_div_1358697351);
+_div_79078692.add(_div_120709342);
+var _div_658244931 = new Emp.Panel({"id":"_div_658244931","height":"2","backgroundColor":"#f4f4f4","width":"100%"});
+_div_79078692.add(_div_658244931);
+_template_1534816008.add(_div_79078692);
+listview.setTemplate(_template_1534816008,"_template_1534816008");
+_div_88345508.add(listview);
+Emp.page.add(_div_88345508);
+
 
 
 
 
 
  
-$jsd('/BugFlow/src/sloveProPage.htmlx',57,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);});function buttonClick() { 
-$jsd('/BugFlow/src/sloveProPage.htmlx',58,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); dialog.show(); 
-} 
-$jsd('/BugFlow/src/sloveProPage.htmlx',61,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function login() { 
-$jsd('/BugFlow/src/sloveProPage.htmlx',62,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); alert("提交数据中......"); 
-$jsd('/BugFlow/src/sloveProPage.htmlx',63,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var form = new $M.Form(); 
-$jsd('/BugFlow/src/sloveProPage.htmlx',64,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); form.setAction("/submitProblem.jsp"); 
-$jsd('/BugFlow/src/sloveProPage.htmlx',65,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); form.submit(function (result) { 
-}, function (errorCode, errorMsg) { 
-$jsd('/BugFlow/src/sloveProPage.htmlx',68,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); log("ajax Error : " + errorCode + " " + errorMsg); 
+$jsd('/flows/src/flowList.htmlx',50,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);});$M.page.addEvent("onLoad", function (data) { 
+$jsd('/flows/src/flowList.htmlx',51,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var items = data.jsonString; 
+$jsd('/flows/src/flowList.htmlx',52,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); alert(items); 
+$jsd('/flows/src/flowList.htmlx',54,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); listview.setItems(items); 
+$jsd('/flows/src/flowList.htmlx',55,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); listview.reloadData(); 
 }); 
-} 
+$jsd('/flows/src/flowList.htmlx',58,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); listview.addEvent("onItemClick", function (row, tag, data) { 
+$jsd('/flows/src/flowList.htmlx',59,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/existFlow5.html", }); 
+}); 
  
 Emp.page.render();

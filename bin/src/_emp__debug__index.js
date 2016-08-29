@@ -580,7 +580,10 @@ jsDebug.debug =  function(resource,line,scope,args,evalFunc){
 };
 
 var $jsd = jsDebug.debug;
-Emp.page.setId('_body_1656384570');
+Emp.page.setId('_body_1462423084');
+$M.includeFile("/Utils/loginUtils.html");
+
+
 var welcome = new Emp.Panel({"id":"welcome","height":"100%","hAlign":"center","width":"100%","backgroundImage":"/images/bg.jpg","class":"setting-title"});
 var logoDiv = new Emp.Panel({"id":"logoDiv","height":"246","hAlign":"center","width":"245"});
 var img = new Emp.Image({"id":"img","height":"246","width":"245","src":"/login/logo.png"});
@@ -591,41 +594,24 @@ Emp.page.add(welcome);
 
 
 
+
+
  
-$jsd('/flow/src/index.htmlx',14,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);});$M.page.setBackgroundColor("#eaeaea"); 
-$jsd('/flow/src/index.htmlx',15,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.addEvent("onLoad", function () { 
-$jsd('/flow/src/index.htmlx',16,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); login(); 
+$jsd('/flows/src/index.htmlx',17,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);});$M.page.setBackgroundColor("#eaeaea"); 
+$jsd('/flows/src/index.htmlx',18,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.addEvent("onLoad", function () { 
+$jsd('/flows/src/index.htmlx',19,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); login(); 
 }); 
-$jsd('/flow/src/index.htmlx',19,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function login() { 
-$jsd('/flow/src/index.htmlx',20,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var pref = new $M.Preferences(); 
-$jsd('/flow/src/index.htmlx',21,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); pref.open("myPref"); 
-$jsd('/flow/src/index.htmlx',23,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); logoDiv.clearAnimation(); 
-$jsd('/flow/src/index.htmlx',24,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var alphaAnimation = new $M.AlphaAnimation({fromAlpha:0, toAlpha:1, duration:1500}); 
-$jsd('/flow/src/index.htmlx',29,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); logoDiv.addAnimation(alphaAnimation); 
-$jsd('/flow/src/index.htmlx',30,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); setTimeout(function () { 
-$jsd('/flow/src/index.htmlx',31,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); logoDiv.startAnimation(); 
+$jsd('/flows/src/index.htmlx',22,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function login() { 
+$jsd('/flows/src/index.htmlx',26,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); logoDiv.clearAnimation(); 
+$jsd('/flows/src/index.htmlx',27,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var alphaAnimation = new $M.AlphaAnimation({fromAlpha:0, toAlpha:1, duration:1500}); 
+$jsd('/flows/src/index.htmlx',32,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); logoDiv.addAnimation(alphaAnimation); 
+$jsd('/flows/src/index.htmlx',33,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); setTimeout(function () { 
+$jsd('/flows/src/index.htmlx',34,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); logoDiv.startAnimation(); 
 }, 20); 
-$jsd('/flow/src/index.htmlx',34,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); alphaAnimation.addEvent("onAnimationEnd", function () { 
-$jsd('/flow/src/index.htmlx',35,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var userid = pref.get("userid"); 
-$jsd('/flow/src/index.htmlx',36,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var password = pref.get("password"); 
-$jsd('/flow/src/index.htmlx',37,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); checkUser(userid, password); 
-}); 
-} 
-$jsd('/flow/src/index.htmlx',41,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); function checkUser(userid, password) { 
-$jsd('/flow/src/index.htmlx',42,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var ajax = new $M.Ajax(); 
-$jsd('/flow/src/index.htmlx',43,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.add("userid", userid); 
-$jsd('/flow/src/index.htmlx',44,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.add("password", password); 
-$jsd('/flow/src/index.htmlx',45,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.setAction("/CheckUser.jsp"); 
-$jsd('/flow/src/index.htmlx',46,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); ajax.submit(function (result) { 
-$jsd('/flow/src/index.htmlx',47,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var user = result.replace(/s/g, ""); 
-$jsd('/flow/src/index.htmlx',48,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); user = user.replace(/[\r\n]/g, ""); 
-if($jsd('/flow/src/index.htmlx',49,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);})||true) if (user == "true") { 
-$jsd('/flow/src/index.htmlx',50,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/choosepage.html", "params":userid, "isDestroySelf":true, }); 
-} else { 
-$jsd('/flow/src/index.htmlx',56,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); $M.page.goTo({"url":"/login.html", "isDestroySelf":true, }); 
-} 
-}, function (errorCode, errorMsg) { 
-$jsd('/flow/src/index.htmlx',62,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); log("ajax Error : " + errorCode + " " + errorMsg); 
+$jsd('/flows/src/index.htmlx',37,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); alphaAnimation.addEvent("onAnimationEnd", function () { 
+$jsd('/flows/src/index.htmlx',38,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var userid = pref.get("userid"); 
+$jsd('/flows/src/index.htmlx',39,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); var password = pref.get("password"); 
+$jsd('/flows/src/index.htmlx',40,this,((typeof(arguments)!="undefined"?arguments:null)),function(__text){return eval(__text);}); checkUser(userid, password); 
 }); 
 } 
  

@@ -1,6 +1,9 @@
 <html>
 <head>
 </head>
+<script>
+	/* 	$M.includeFile("/Utils/queryUtils.html"); */
+</script>
 <body>
 	<div id="welcome" class="setting-title" width="100%" height="100%"
 		hAlign="center" backgroundImage="/images/bg.jpg" layout="VBox">
@@ -26,26 +29,43 @@
 </body>
 
 <script>
-	
+	var userid;
+	$M.page.addEvent("onLoad", function(data) {
+		userid = data.userid;
+	});
+
 	function onClickSetting() {
-	//todo
-	$M.page.goTo({
-				'url' : '/login.html',
+		var ajax = new $M.Ajax();
+		ajax.add("userid", userid);
+		log("00000", userid);
+
+		ajax.setAction("/queryPro.jsp");
+		ajax.submit(function(result) {
+		
+			$M.page.goTo({
+				'url' : '/flowList.html',
+				'params' : {
+					jsonString:result
+				},
 			});
+		}, function(errorCode, errorMsg) {
+
+		});
+
 	}
-	
-	function onClikNewFlow(){
-	//todo
+
+	function onClikNewFlow() {
+		//todo
 		$M.page.goTo({
-				'url' : '/newFlow.html',
-			});
+			'url' : '/newFlow.html',
+		});
 	}
-	
-	function onClickExistFlow(){
-	//todo
+
+	function onClickExistFlow() {
+		//todo
 		$M.page.goTo({
-				'url' : '/existFlow5.html',
-			});
+			'url' : '/flowList.html',
+		});
 	}
 </script>
 
